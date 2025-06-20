@@ -1,2 +1,3 @@
-# sim-ple
-A simple physics engine to help me pass my physics exams while having fun!
+## Conventions - Units
+
+- Durations are in seconds if stored, as `f32`, and in milliseconds if stored as `u64`.

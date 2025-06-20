@@ -1,0 +1,14 @@
+0000000000000000000000000000000000000000 a46e58f0fb1f9661ccf11b72b91ca63952c310d7 SkwalExe <skwal@skwal.net> 1748334044 +0200	commit (initial): Base commit
+a46e58f0fb1f9661ccf11b72b91ca63952c310d7 cb8b56c759e86a0cf3549be30b8b874697276085 SkwalExe <skwal@skwal.net> 1748336150 +0200	commit: Add serde to egui
+cb8b56c759e86a0cf3549be30b8b874697276085 f20bf2cf75ba152840c3e056075656321e40af21 SkwalExe <skwal@skwal.net> 1748336209 +0200	commit: Save entire app state instead of just camera and engine
+f20bf2cf75ba152840c3e056075656321e40af21 a148c8a8b97abe5a166c72c8f55299f70c9efda0 SkwalExe <skwal@skwal.net> 1748438298 +0200	commit: Start to add some convention
+a148c8a8b97abe5a166c72c8f55299f70c9efda0 d508ee4f1d891afad84008fd491e55bdd18aa3d0 SkwalExe <skwal@skwal.net> 1748438960 +0200	commit: Improve FPS limit logic, and selection interface.
+d508ee4f1d891afad84008fd491e55bdd18aa3d0 39ef19d73140ba5f42b34de1396b1adf5fa91b29 SkwalExe <skwal@skwal.net> 1748441791 +0200	commit: Fix explosion due to gravity on perfectly overlapping points
+39ef19d73140ba5f42b34de1396b1adf5fa91b29 4343c6ff266a781864ab0713537ead09e7dd5bfe SkwalExe <skwal@skwal.net> 1748518029 +0200	commit: Fix viewport rect collision rendering
+4343c6ff266a781864ab0713537ead09e7dd5bfe e9ffe9c5d09b91ced8c5fbd1a6637eacd5a8417f SkwalExe <skwal@skwal.net> 1748518075 +0200	commit: Prevent null mass
+e9ffe9c5d09b91ced8c5fbd1a6637eacd5a8417f cb1f7c7267bf8df63819eed6a6140a388b4923ad SkwalExe <skwal@skwal.net> 1748518124 +0200	commit: Change pause button
+cb1f7c7267bf8df63819eed6a6140a388b4923ad 51438269f690a7abf07a1f3afaa5c10f20b2dca9 SkwalExe <skwal@skwal.net> 1748622217 +0200	commit: Remove invalid points
+51438269f690a7abf07a1f3afaa5c10f20b2dca9 8c698ddc9f16dd0e7fabd5a6dd30778b3a5a714e SkwalExe <skwal@skwal.net> 1750423416 +0200	commit: Reset id tracker when clearing balls
+8c698ddc9f16dd0e7fabd5a6dd30778b3a5a714e 9525da1e2d71ae06febbcf84561515cbbdc5b924 SkwalExe <skwal@skwal.net> 1750423446 +0200	commit: Do not save id tracker
+9525da1e2d71ae06febbcf84561515cbbdc5b924 2508d9131e6ba9bdfa07b6536853069a94124c4a SkwalExe <skwal@skwal.net> 1750425090 +0200	commit: Add point trackers
+2508d9131e6ba9bdfa07b6536853069a94124c4a 41e824e33a26d89266efb9a58ebf5a2fbbbedcd6 SkwalExe <skwal@skwal.net> 1750426070 +0200	commit: Try to fix collisions

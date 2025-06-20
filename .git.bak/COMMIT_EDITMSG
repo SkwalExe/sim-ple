@@ -1,0 +1,66 @@
+Try to fix collisions
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Changes to be committed:
+#	modified:   src/physics/objects/point/collisions.rs
+#
+# ------------------------ >8 ------------------------
+# Do not modify or remove the line above.
+# Everything below it will be ignored.
+diff --git a/src/physics/objects/point/collisions.rs b/src/physics/objects/point/collisions.rs
+index 071cc8c..b81d221 100644
+--- a/src/physics/objects/point/collisions.rs
++++ b/src/physics/objects/point/collisions.rs
+@@ -11,7 +11,7 @@ impl Point {
+         for b in points {
+             // ======================= DETERMINE IF WE ARE COLLIDING.
+             // Avoid making the point collide with itself, and don't move the point if pinned.
+-            if b.id == self.id || self.pinned {
++            if b.id == self.id || self.pinned || !self.is_normal() || !b.is_normal() {
+                 continue;
+             }
+ 
+@@ -52,6 +52,7 @@ impl Point {
+                 continue;
+             }
+ 
++
+             // From here we are colliding.
+             // ====================== MOVING HALF THE OVERLAP DISTANCE
+ 
+@@ -59,10 +60,11 @@ impl Point {
+             let ab_unit = ab.normalize();
+             let move_away = ab_unit * overlap / 2.;
+ 
+-            self.pos -= move_away;
++            // 1
++            // self.pos -= move_away;
+ 
+-            // NO:
+-            // self.set_pos(self.pos - move_away);
++            // 2 
++            self.set_pos(self.pos - move_away);
+ 
+             // Also compute the position of the point B after he
+             // would have moved from the point A.
+@@ -70,11 +72,15 @@ impl Point {
+             let last_pos_b = b.last_pos + move_away;
+ 
+             // ===================== Conservation of momentum.
++            // hic jacet lepus...
++
++            // 1
++            // continue;
+ 
+             // If A is already moving away from B, then dont change velocity;
+-            // if self.vel().dot(ab_unit) < 0. {
+-            //     continue;
+-            // }
++            if self.vel().dot(ab_unit) < 0. {
++                continue;
++            }
+ 
+             // The unit vector tangent to the circles at the point of collision
+             let tangent_unit = Vec2::new(-ab_unit.y, ab_unit.x);
